@@ -1,3 +1,61 @@
+/* Styles par défaut pour les écrans de bureau */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Styles pour les écrans tablettes et mobiles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .feature {
+        width: 90%; 
+        margin: 10px 0; 
+    }
+
+    #palmares h2 {
+        font-size: 2em; 
+    }
+
+    .palmares-table {
+        font-size: 0.9em; 
+    }
+
+    .palmares-table th, .palmares-table td {
+        padding: 8px; 
+    }
+
+    img {
+        max-width: 100%; 
+        height: auto; 
+    }
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em; 
+    }
+
+    .cta-button {
+        font-size: 1em; 
+    }
+
+    img {
+        max-width: 100%; 
+        height: auto; 
+    }
+}
+
 /* Style de base */
 body {
     font-family: 'Arial', sans-serif;
@@ -7,7 +65,7 @@ body {
 }
 
 header {
-    background-color: rebeccapurple;
+    background-color: red;
     color: white;
     padding: 10px 0;
     top: 0;
@@ -37,7 +95,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: orchid;
+    color: yellow;
     transform: scale(1.1);
 }
 
@@ -70,8 +128,8 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: teal;
-    color: white;
+    background-color: yellow;
+    color: black;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -80,7 +138,7 @@ header nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: gray;
+    background-color: white;
 }
 
 /* Section à propos */
@@ -97,7 +155,7 @@ header nav ul li a:hover {
 
 /* Section avec 3 colonnes */
 #features {
-    background-color: black;
+    background-color: darkred;
     padding: 50px 20px;
 }
 
@@ -111,7 +169,7 @@ header nav ul li a:hover {
     text-align: center;
     color: white;
     width: 30%;
-    background-color: rebeccapurple;
+    background-color: red;
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -126,8 +184,8 @@ header nav ul li a:hover {
 }
 
 .details-button {
-    background-color: teal;
-    color: white;
+    background-color: yellow;
+    color: black;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -137,49 +195,40 @@ header nav ul li a:hover {
 }
 
 .details-button:hover {
-    background-color: gray;
-}
-
-/*albums*/
-.albums-section {
-    padding: 40px;
-    text-align: center;
-    background-color: teal
-}
-
-.albums-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.album {
-    flex: 1 1 calc(25% - 40px); /* Chaque album prend 25% de l'espace avec un écart */
-    max-width: 300px; /* Limite la taille des albums */
     background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
+}
+
+/*Tableau*/
+#palmares h2 {
     text-align: center;
-    padding: 10px;
+    margin-bottom: 20px;
 }
 
-.album img {
+.palmares-table {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    min-width: 400px;
+    text-align: left;
+    background-color: #f2f2f2;
 }
 
-.album h3 {
-    font-size: 1.2em;
-    margin: 10px 0 5px;
+.palmares-table thead {
+    background-color: #333;
+    color: #fff;
 }
 
-.album p {
-    font-size: 0.9em;
-    color: black;
+.palmares-table th, .palmares-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
 }
+
+.palmares-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
 
 /* Footer */
 footer {
